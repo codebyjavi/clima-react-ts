@@ -4,7 +4,7 @@ import useWeather from './hooks/useWeather'
 
 function App() {
 
-  const { fetchWeather } = useWeather()
+  const { weather, fetchWeather } = useWeather()
 
 
   return (
@@ -15,7 +15,9 @@ function App() {
         <Form
           fetchWeather={fetchWeather}
         />
+
       </section>
+      
     </>
   )
 }
