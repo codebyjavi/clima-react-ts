@@ -7,13 +7,13 @@ function App() {
     <>
       <h1 className={styles.title}>Busque su clima</h1>
 
-      <div className={styles.container}>
+      <section className={styles.container}>
         <Form/>
-      </div>
+      </section>
 
-      <div className={styles.container}>
+      <section className={styles.container}>
         <p>l</p>
-      </div>
+      </section>
     </>
   )
 }

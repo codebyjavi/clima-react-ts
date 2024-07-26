@@ -27,6 +27,7 @@ export default function Form() {
                     id="city" 
                     name="city"
                     placeholder="Ciudad"
+                    value={search.city}
                     onChange={handleChange}
                 />
             </div>
@@ -36,6 +37,7 @@ export default function Form() {
                 <select 
                     name="country" 
                     id="country"
+                    value={search.country}
                     onChange={handleChange}
                 >
                     <option value="">-- Seleccione un País --</option>
