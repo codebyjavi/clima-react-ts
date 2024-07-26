@@ -2,7 +2,7 @@ import { useState } from "react";
 import { countries } from "../../data/countries";
 import styles from './Form.module.css'
 import { SearchType } from "../../types";
-import Alert from "../../Alert/Alert";
+import Alert from "../Alert/Alert";
 
 type FormProps = {
     fetchWeather: (search: SearchType) => Promise<void>
