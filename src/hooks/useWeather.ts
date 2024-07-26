@@ -13,7 +13,14 @@ export default function useWeather() {
             // Destructuring al resultado para acceder directamente a data
             const { data } = await axios(geoURL)
             
-            console.log(data);
+            const lat = data[0].lat
+            const lon = data[0].lon
+
+            const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`
+
+            const weather = await axios(weatherURL)
+            console.log(weather.data);
+                
             
         } catch (error) {
             console.log(error);            
