@@ -1,0 +1,11 @@
+.alert{
+    padding: 0.7rem;
+    background-color: var(--red);
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.8rem;
+    border-radius: .5rem;
+}

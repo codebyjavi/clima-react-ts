@@ -6,7 +6,7 @@
     border-radius: 1rem;
     backdrop-filter: blur(20px);
     background: transparent;
-   color: var(--black); 
+    color: var(--black); 
 }
 
 .field {
@@ -15,14 +15,13 @@
     border-radius: 1rem;
     gap: 1rem;
     color: var(--black);
-    background: transparent;
 }
 
 .form input[type="text"],
 .form select {
-    background: transparent;
+    background: var(--slate);
     padding: 1rem;
-    border: .2rem solid #d4d4d4;
+    border: .1rem solid #c7c7c7;
     font-size: 1.8rem;
     font-weight: 400;
     border-radius: .6rem;
@@ -41,6 +40,5 @@
     margin-top: 2rem;
 }
 .submit:hover {
-    
     background-color: var(--primaryHover);
 }

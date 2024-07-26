@@ -1,9 +1,10 @@
 :root {
   --white: #ffffff;
-  --primary: #F5930B;
-  --primaryHover: #d4810d;
+  --primary: #0b5df5;
+  --primaryHover: #0d6ad4;
   --slate: #dce3eb;
   --black: #000000;
+  --red: #c92b2b;
 }
 
 html {
