@@ -1,6 +1,9 @@
 :root {
-  --white: #fff;
+  --white: #ffffff;
   --primary: #F5930B;
+  --primaryHover: #d4810d;
+  --slate: #dce3eb;
+  --black: #000000;
 }
 
 html {
@@ -15,4 +18,6 @@ body {
   background-repeat: no-repeat;
   color: var(--white);
   font-size: 2rem;
+  position: relative;
+  z-index: 0;
 }

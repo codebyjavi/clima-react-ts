@@ -1,23 +1,31 @@
-.form,
-.field {
+.form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(20px);
+    background: transparent;
+   color: var(--black); 
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    gap: 1rem;
+    color: var(--black);
+    background: transparent;
 }
 
 .form input[type="text"],
 .form select {
+    background: transparent;
     padding: 1rem;
-    background-color: transparent;
-    border: .3rem solid var(--white);
-    color: var(--white);
+    border: .2rem solid #d4d4d4;
     font-size: 1.8rem;
     font-weight: 400;
-    border-radius: 1rem;
-}
-
-.field ::placeholder {
-    color: var(--white);
+    border-radius: .6rem;
 }
 
 .submit {
@@ -28,5 +36,11 @@
     font-size: 1.4rem;
     text-transform: uppercase;
     cursor: pointer;
-    padding: 1.2rem;
+    padding: 1.3rem;
+    border-radius: .6rem;
+    margin-top: 2rem;
+}
+.submit:hover {
+    
+    background-color: var(--primaryHover);
 }

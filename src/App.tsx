@@ -9,7 +9,10 @@ function App() {
 
       <div className={styles.container}>
         <Form/>
-        <p>2</p>
+      </div>
+
+      <div className={styles.container}>
+        <p>l</p>
       </div>
     </>
   )
