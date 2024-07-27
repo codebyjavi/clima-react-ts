@@ -5,8 +5,7 @@ import useWeather from './hooks/useWeather'
 
 function App() {
 
-  const { weather, fetchWeather } = useWeather()
-
+  const { weather, fetchWeather, hasWeatherData } = useWeather()
 
   return (
     <>
@@ -17,9 +16,9 @@ function App() {
           fetchWeather={fetchWeather}
         />
       </section>
-      <WeatherDetails
-        weather={weather}
-      />
+
+      {hasWeatherData ? (<WeatherDetails weather={weather}/>)  : (<p style={{textAlign: 'center'}}>Sin resultados!</p>)}
+      
     </>
   )
 }

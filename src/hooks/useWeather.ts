@@ -2,7 +2,7 @@
 import { z } from "zod";
 import axios from "axios";
 import { SearchType } from "../types";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 const Weather = z.object({
     name: z.string(),
@@ -12,10 +12,10 @@ const Weather = z.object({
         temp_min: z.number()
     })
 })
-
 export type Weather = z.infer<typeof Weather>
 
 export default function useWeather() {
+
 
     const [weather, setWeather] = useState<Weather>({
         name: '',
@@ -34,14 +34,18 @@ export default function useWeather() {
             const geoURL = `http://api.openweathermap.org/geo/1.0/direct?q=${search.city},${search.country}&appid=${appId}`
             // Destructuring al resultado para acceder directamente a data
             const { data } = await axios(geoURL)
+
+            if(!data[0]) {
+                return
+            }
             
             const lat = data[0].lat
             const lon = data[0].lon
 
-            const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`
+            const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}&units=metric`
 
-            // ZOD
             const { data: weatherResult } = await axios(weatherURL)
+            // ZOD
             const result = Weather.safeParse(weatherResult)
             
             if(result.success){
@@ -50,11 +54,17 @@ export default function useWeather() {
             
         } catch (error) {
             console.log(error);            
+        } finally {
+
         }
+
     }
+    
+    const hasWeatherData = useMemo(() => weather.name, [weather])
     
     return {
         weather,
-        fetchWeather
-    }
+        fetchWeather,
+        hasWeatherData
+    }   
 }

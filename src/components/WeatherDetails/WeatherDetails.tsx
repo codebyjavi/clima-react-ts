@@ -6,8 +6,15 @@ type WeatherDetailsProps = {
 }
 
 export default function WeatherDetails({ weather } : WeatherDetailsProps) {
-    console.log(weather);
+
+    const { main: {temp, temp_max, temp_min}, name } = weather
+
     return (
-        <div  className={styles.weather}>WeatherDetails</div>
+        <section  className={styles.weather}>
+            <h3>{name}</h3>
+            <h3>{Math.round(temp)}</h3>
+            <h3>{Math.round(temp_max)}</h3>
+            <h3>{Math.round(temp_min)}</h3>
+        </section>
     )
 }
