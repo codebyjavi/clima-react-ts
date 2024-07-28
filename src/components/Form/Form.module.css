@@ -4,8 +4,7 @@
     gap: 2rem;
     padding: 2rem;
     border-radius: 1rem;
-    backdrop-filter: blur(20px);
-    background: transparent;
+    background: #Ffff;
     color: var(--black); 
 }
 

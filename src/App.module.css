@@ -12,6 +12,19 @@
     margin: 0 auto;
 }
 
+.alert {
+    display: flex;
+    width: 95%;
+    max-width: 60rem;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(20px);
+    background: transparent;
+    color: var(--black);
+    margin: 5rem auto;
+}
+
 @media (max-width: 768px) {
     .title {
         font-size: 3.5rem;

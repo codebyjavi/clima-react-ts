@@ -17,7 +17,7 @@ function App() {
         />
       </section>
 
-      {hasWeatherData ? (<WeatherDetails weather={weather}/>)  : (<p style={{textAlign: 'center'}}>Sin resultados!</p>)}
+      {hasWeatherData && (<WeatherDetails weather={weather}/>)}
       
     </>
   )

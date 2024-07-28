@@ -10,11 +10,15 @@ export default function WeatherDetails({ weather } : WeatherDetailsProps) {
     const { main: {temp, temp_max, temp_min}, name } = weather
 
     return (
-        <section  className={styles.weather}>
-            <h3>{name}</h3>
-            <h3>{Math.round(temp)}</h3>
-            <h3>{Math.round(temp_max)}</h3>
-            <h3>{Math.round(temp_min)}</h3>
+        <section className={styles.container}>
+            <div className={styles.weather}>
+                <h3>Clima de {name}</h3>
+                <p>{Math.round(temp)}&deg;C</p>
+                <div>
+                    <span>Max: {Math.round(temp_max)}&deg;C</span>
+                    <span>Min: {Math.round(temp_min)}&deg;C</span>
+                </div>
+            </div>
         </section>
     )
 }

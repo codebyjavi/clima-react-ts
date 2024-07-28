@@ -1,5 +1,36 @@
-.weather {
+.container {
     width: 95%;
     max-width: 60rem;
-    margin: 5rem auto;
+    margin: 0 auto;
 }
+
+.weather {
+    margin-top: 5rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #Ffff;
+    color: var(--black); 
+    text-align: center;
+    
+}
+
+.weather p {
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 3rem;
+}
+
+.weather h3 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.weather div {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
